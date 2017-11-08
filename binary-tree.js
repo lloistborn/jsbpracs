@@ -1,28 +1,35 @@
-// https://medium.freecodecamp.org/all-you-need-to-know-about-tree-data-structures-bceacb85490c
+"use strict";
 
-function BinaryTree(value) {
-	this.value = value;
-	this.leftChild = null;
-	this.rightChild = null;
-}
-
-BinaryTree.prototype.insertLeft = function(value) {
-	if (this.leftChild == null) {
-		this.leftChild = new BinaryTree(value);
-	} else {
-		let newNode = new BinaryTree(value);
-		newNode.leftChild = this.leftChild;
-		this.leftChild = newNode;
+class BinaryTree {
+	
+	constructor(value) {
+		this.value = value;
+		this.leftChild = null;
+		this.rightChild = null;
 	}
-}
 
-BinaryTree.prototype.insertRight = function(value) {
-	if (this.rightChild == null) {
-		this.rightChild = new BinaryTree(value);
-	} else {
-		let newNode = new BinaryTree(value);
-		newNode.rightChild = newNode;
-		this.rightChild = newNode;
+	insertLeft(value) {
+		if (this.leftChild == null) {
+			this.leftChild = new BinaryTree(value);
+		} else {
+			let newNode = new BinaryTree(value);
+			newNode.leftChild = this.leftChild;
+			this.leftChild = newNode;
+		}
+
+		return this;
+	}
+
+	insertRight(value) {
+		if (this.rightChild == null) {
+			this.rightChild = new BinaryTree(value);
+		} else {
+			let newNode = new BinaryTree(value);
+			newNode.rightChild = newNode;
+			this.rightChild = newNode;
+		}
+
+		return this;
 	}
 }
 
