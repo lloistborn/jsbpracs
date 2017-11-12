@@ -1,2 +1,2 @@
 # jsbpracs
-Design Pattern &amp; Best Practices on JavaScript
+JavaScript Design Pattern &amp; Best Practices Demistifying
