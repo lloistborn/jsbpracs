@@ -25,6 +25,6 @@ let Exposer = (function() {
 
 })()
 
-Exposer.first()
-Exposer.second()
-Exposer.methodToExpose()
+Exposer.first() // ok
+Exposer.second() // ok
+Exposer.methodToExpose() // error
